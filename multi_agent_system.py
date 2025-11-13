@@ -75,6 +75,13 @@ async def main():
     result = team.run_stream(task=my_task)
 
     await Console(result)
+    
+    ## Another process of showing the result-----------------------
+    # result = await team.run(task=my_task)
+    
+    # for each_agent_message in result.messages:
+    #     print(f"{each_agent_message.source}: {each_agent_message.content}")
 
 if __name__ == "__main__":
     asyncio.run(main())
+
